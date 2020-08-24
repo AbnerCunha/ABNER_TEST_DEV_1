@@ -15,7 +15,6 @@ class CompanyService {
         def hours = dateNow.get(dateNow.HOUR_OF_DAY)
         def minutes = dateNow.get(dateNow.MINUTE)
         def manyQuotes
-        //System.out.print("This is the time: " + hours + ":" + minutes + "\n")
 
         if (hours > 18 || (hours == 18 && minutes > 0)) { //Number of quotes for every business minute of the past 30 days, counting the past business minutes of today
             manyQuotes = (8 * 60 + 1) * 2 //é 30
@@ -31,8 +30,6 @@ class CompanyService {
                 }
             }
         }
-
-        //System.out.print("Total de quotes: " + manyQuotes + "\n")
 
         def comp = new Company( name: companyName, segment: companySegment)
 
