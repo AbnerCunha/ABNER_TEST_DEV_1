@@ -1,0 +1,4 @@
+<button (click)="getCompanies()">GET COMPANIES</button>
+<div *ngFor="let company of companies$ | async">
+  <p>Name: {{ company.name }} --- Segment: {{ company.segment }}</p>
+</div>
